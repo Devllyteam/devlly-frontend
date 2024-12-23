@@ -65,7 +65,7 @@ export default function PostEditor() {
                   <WriteArticleDialog />
                   <CharacterCount />
                 </div>
-                <Button>Post</Button>
+                <Button>Post Now</Button>
               </div>
             </div>
           </LexicalComposer>

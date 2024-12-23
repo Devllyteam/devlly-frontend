@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import "./globals.css";
 
 import { siteConfig } from "@/config/site";
 
-
 import Script from "next/script";
 import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -132,17 +126,13 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
-      >
+      <body className={`${inter.variable} font-sans antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          
-
           <main className="sm:container mx-auto w-[85vw] h-auto">
             {children}
           </main>

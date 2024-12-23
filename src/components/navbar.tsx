@@ -25,27 +25,31 @@ export function NavBar() {
           </div>
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="/"
-              className="text-sm font-medium hover:text-primary cursor-not-allowed"
+              href="/scroll"
+              className="text-sm font-medium hover:text-primary "
             >
               Scroll
             </Link>
             <Link
-              href="/"
-              className="text-sm font-medium hover:text-primary cursor-not-allowed"
+              href="/gig"
+              className="text-sm font-medium hover:text-primary "
             >
               GIG
             </Link>
             <Link
-              href="/"
-              className="text-sm font-medium hover:text-primary cursor-not-allowed"
+              href="/pitchroom"
+              className="text-sm font-medium hover:text-primary "
             >
               Pitchroom
             </Link>
-            <Button variant="outline" className="cursor-not-allowed">
+          <Link href="/login">
+          <Button variant="outline" className="">
               Log in
             </Button>
-            <Button className="cursor-not-allowed">Create Profile</Button>
+          </Link>
+          <Link href="/signup">
+          <Button className="">Create Profile</Button>
+          </Link>
             <ModeToggle />
           </div>
           <div className="md:hidden">
@@ -77,32 +81,32 @@ export function NavBar() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
                 href="/"
-                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground cursor-not-allowed"
+                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground "
               >
                 Scroll
               </Link>
               <Link
                 href="/"
-                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground cursor-not-allowed"
+                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground "
               >
                 GIG
               </Link>
               <Link
                 href="/"
-                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground cursor-not-allowed"
+                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-accent hover:text-accent-foreground "
               >
                 Pitchroom
               </Link>
               <div className="px-3 py-2">
                 <Button
                   variant="outline"
-                  className="w-full justify-center cursor-not-allowed"
+                  className="w-full justify-center "
                 >
                   Log in
                 </Button>
               </div>
               <div className="px-3 py-2">
-                <Button className="w-full justify-center cursor-not-allowed">
+                <Button className="w-full justify-center ">
                   Create Profile
                 </Button>
               </div>

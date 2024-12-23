@@ -2,8 +2,6 @@
 
 import StackedCircularFooter from "@/components/footer";
 import { NavBar } from "@/components/navbar";
-
-
 import { motion } from "framer-motion";
 
 const Page = () => {

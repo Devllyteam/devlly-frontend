@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
-
-import { Inter } from "next/font/google";
-
+import { Reddit_Sans as Geist_Sans } from 'next/font/google';
 import "./globals.css";
-
 import { siteConfig } from "@/config/site";
-
 import Script from "next/script";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const geistSans = Geist_Sans({
+  subsets: ['latin'],
+  variable: '--font-geist-sans',
 });
 
 export const metadata: Metadata = {
@@ -24,8 +20,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "linkedin",
-    "devlly",
-    "devlly.me",
+    "Growify",
+    "Growify.me",
     "developer",
     "programming",
     "coding",
@@ -40,12 +36,11 @@ export const metadata: Metadata = {
     "100 days of code",
     "100xdevs",
     "100x engineers",
-
     ...siteConfig.keywords,
   ],
   authors: [
     {
-      name: "Devlly",
+      name: "Growify",
       url: siteConfig.url,
     },
     {
@@ -70,7 +65,6 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage.url],
     creator: "@arihantcodes",
   },
-
   manifest: `${siteConfig.url}/site.webmanifest`,
   robots: {
     index: true,
@@ -126,7 +120,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased bg-background`}>
+      <body className={`${geistSans.variable} font-sans antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

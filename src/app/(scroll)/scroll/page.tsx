@@ -6,7 +6,7 @@ import PostEditor from "@/components/main/post";
 
 export default function Home() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 w-full">
       <div className="flex gap-12 justify-between  border-b pb-4">
         <h1 className="font-semibold text-base text-gray-900">Scroll</h1>
 

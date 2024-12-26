@@ -6,6 +6,7 @@ import GridIllustration from "./ui/grid-illustration";
 import IntegrationBox from "./ui/integrationBox";
 
 import { Button } from "./ui/button";
+import { LogIn } from "lucide-react";
 
 export default function Hero() {
   const textVariants = {
@@ -34,7 +35,7 @@ export default function Hero() {
           <div className="relative my-20 flex max-w-6xl flex-col items-center px-6 lg:items-start">
             {/* Title */}
             <motion.div
-              className="max-w-64 text-center text-4xl font-bold sm:max-w-[340px] sm:text-6xl lg:text-left"
+              className="text-center text-[30px]  leading-none font-bold sm:text-[3.5rem] sm:leading-tight lg:text-left"
               variants={textVariants}
               initial="hidden"
               animate="visible"
@@ -44,8 +45,10 @@ export default function Hero() {
                 delay: 0.2,
               }}
             >
-              <h1 className="bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-transparent dark:from-neutral-50 dark:to-neutral-300 ">
-                Build Your Network, Grow Your Career
+              <h1 className="bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-transparent dark:from-neutral-50 dark:to-neutral-300">
+                Build Your Network
+                <br />
+                Grow Your Career
               </h1>
             </motion.div>
 
@@ -61,10 +64,9 @@ export default function Hero() {
                 delay: 0.4,
               }}
             >
-              <p className="text-base text-black/60 dark:text-gray-500 sm:text-lg">
-                Your All-In-One Community, Freelance Marketplace,
-                <br />
-                And Personal Link Hub
+              <p className="text-base text-black/60 dark:text-gray-500 sm:text-lg font-medium">
+                Your All-In-One Community, Freelance Marketplace, and Link Hub
+                Join Now and Explore Endless Opportunities
               </p>
             </motion.div>
 
@@ -78,9 +80,9 @@ export default function Hero() {
                 delay: 0.6,
               }}
             >
-              <Button asChild>
-                <Link href="/pricing">Download For Free</Link>
-              </Button>
+              <Link href="/signup" className="">
+                <Button className=" font-semibold">Create Account Today <LogIn/></Button>
+              </Link>
             </motion.div>
           </div>
 

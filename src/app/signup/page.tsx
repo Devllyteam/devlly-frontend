@@ -11,7 +11,7 @@ const Page = () => {
       <div className="min-h-screen flex flex-col">
         <NavBar />
         <main className="flex-1 flex flex-col items-center justify-center px-4">
-          <div className="text-center  space-y-5 max-w-2xl mx-auto mt-6 lg:mt-20">
+          <div className="text-center  space-y-5 max-w-2xl mx-auto mt-20 lg:mt-28">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}

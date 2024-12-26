@@ -1,6 +1,7 @@
 "use client";
 
-import StackedCircularFooter from "@/components/footer";
+import Footer from "@/components/footer";
+
 import HeroAi from "@/components/hero";
 
 import { NavBar } from "@/components/navbar";
@@ -10,10 +11,10 @@ const Page = () => {
     <>
       <div className="">
         <NavBar />
-        <main>
+        <main className="">
           <HeroAi />
+          <Footer />
         </main>
-        <StackedCircularFooter />
       </div>
     </>
   );

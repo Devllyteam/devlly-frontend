@@ -67,7 +67,7 @@ export default function MobileMenu() {
       >
         <div>
           <SheetHeader className="mb-4">
-            <SheetTitle className="text-center">Devlly Menu</SheetTitle>
+            <SheetTitle className="text-center">Growify Menu</SheetTitle>
           </SheetHeader>
           <nav aria-label="Mobile menu">
             <ul className="space-y-1">
@@ -84,61 +84,19 @@ export default function MobileMenu() {
                     className="mt-4 w-full justify-start"
                   >
                     <SquareArrowRight className="mr-2 h-4 w-4" />
-                    Try PearAI
+                    Try Growify
                   </Button>
                 </Link>
               </div>
-              <MobileNavItem href="/" onClick={() => setIsOpen(false)}>
-                Home
+              <MobileNavItem href="/scroll" onClick={() => setIsOpen(false)}>
+                SCROLL
               </MobileNavItem>
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="resources">
-                  <AccordionTrigger>Resources</AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="ml-4 space-y-1">
-                      <MobileNavItem
-                        href="/about"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        About
-                      </MobileNavItem>
-                      <MobileNavItem
-                        href="/docs"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Documentation
-                      </MobileNavItem>
-                      <MobileNavItem
-                        href="https://github.com/trypear/pearai-master"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Github
-                      </MobileNavItem>
-                      <MobileNavItem
-                        href="/blog"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Blog
-                      </MobileNavItem>
 
-                      <MobileNavItem
-                        href="/faq"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        FAQ
-                      </MobileNavItem>
-                      <MobileNavItem
-                        href="/changelog"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Changelog
-                      </MobileNavItem>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-              <MobileNavItem href="/pricing" onClick={() => setIsOpen(false)}>
-                Pricing
+              <MobileNavItem href="/gig" onClick={() => setIsOpen(false)}>
+                GIG
+              </MobileNavItem>
+              <MobileNavItem href="/pitchroom" onClick={() => setIsOpen(false)}>
+                PITCHROOM
               </MobileNavItem>
             </ul>
           </nav>

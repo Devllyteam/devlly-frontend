@@ -16,7 +16,7 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <DropdownMenu>
+    <DropdownMenu >
     <DropdownMenuTrigger asChild>
       <Button size="icon" variant="outline" aria-label="Select theme">
         {theme === "light" && (
@@ -27,7 +27,7 @@ export function ModeToggle() {
         )}
       </Button>
     </DropdownMenuTrigger>
-    <DropdownMenuContent className="min-w-32">
+    <DropdownMenuContent className="min-w-32 dark:border-neutral-700">
       <DropdownMenuItem onClick={() => setTheme("light")}>
         <Sun
           size={16}

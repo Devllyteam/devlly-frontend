@@ -1,10 +1,10 @@
 export const siteConfig = {
-    name: "Devlly",
-    url: "https://devlly.arihant.us",
+    name: "Growify",
+    url: "https://growify.arihant.us",
     ogImage: {
-      url: "https://devlly.arihant.us/og.png",
+      url: "https://growify.arihant.us/og.png",
   
-      alt: "Devlly - A next-gen freelancing platform combining community engagement, career growth, and opportunities for developers",
+      alt: "Growify - A next-gen freelancing platform combining community engagement, career growth, and opportunities for developers",
     },
     description:
       "A next-gen freelancing platform combining community engagement, career growth, and opportunities for developers",
@@ -21,8 +21,8 @@ export const siteConfig = {
     },
     keywords: [
       "linkedin",
-      "devlly",
-      "devlly.me",
+      "Growify",
+      "Growify.me",
       "developer",
       "programming",
       "coding",

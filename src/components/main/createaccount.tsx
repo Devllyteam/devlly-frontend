@@ -114,7 +114,7 @@ export function CreateAccountForm({
               </div>
               <div className="text-center text-sm">
                 Already have an account?{" "}
-                <a href="/login" className="underline underline-offset-4 text-primary">
+                <a href="/signin" className="underline underline-offset-4 text-primary">
                   Login
                 </a>
               </div>

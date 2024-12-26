@@ -120,7 +120,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.variable} font-sans antialiased bg-background`}>
+      <body className={`${geistSans.variable}  antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

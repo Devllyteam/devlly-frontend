@@ -82,31 +82,32 @@ export function NavBar() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 p-4 transition-all duration-300 ease-in-out">
-      <div className="mx-auto max-w-[900px]">
+      <div className="mx-auto max-w-[1024px] ">
         <nav
-          className="rounded-2xl border-[1.5px] border-gray-200 bg-background px-2 transition-all duration-300 ease-in-out dark:border-neutral-700"
+          className="rounded-2xl border-[1.5px]  border-gray-200 bg-background px-2 transition-all duration-300 ease-in-out dark:border-neutral-700"
           aria-label="Main navigation"
         >
-          <div className="flex h-12 items-center justify-between  ">
+          <div className="flex h-12 items-center justify-between   ">
             <div className="flex items-center">
               <Link
                 href="/"
                 className="flex flex-shrink-0 items-center"
-                aria-label="PearAI Home"
+                aria-label="Growify Home"
               >
                 <Image src="/growify.svg" width={35} height={25} alt="Devlly" />
-                <div className="ml-1 text-2xl font-bold">Growify</div>
+                <div className="ml-2 text-2xl  font-bold">Growify</div>
               </Link>
               <nav className="ml-4 hidden md:block" aria-label="Main menu">
                 <NavigationMenu>
-                  <NavigationMenuList className="text-black/60 dark:text-gray-500">
-                    <NavItem href="/scroll">Scroll</NavItem>
-                    <NavItem href="/gig">Gig</NavItem>
-                    <NavItem href="/pitchroom">Pitchroom</NavItem>
+                  <NavigationMenuList className="flex items-center text-neutral-700 dark:text-neutral-300 ">
+                    <NavItem href="/scroll">SCROLL</NavItem>
+                    <NavItem href="/gig">GIG</NavItem>
+                    <NavItem href="/pitchroom">PITCHROOM</NavItem>
                   </NavigationMenuList>
                 </NavigationMenu>
               </nav>
             </div>
+
             <div className="hidden items-center space-x-4 lg:flex">
               <AuthButton />
               <ModeToggle />

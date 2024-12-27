@@ -41,10 +41,21 @@ const config: Config = {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
+			  primary: {
+				DEFAULT: "hsla(var(--primary), <alpha-value>)",
+				foreground: "hsla(var(--primary-foreground), <alpha-value>)",
+				50: "hsla(var(--primary-50), <alpha-value>)",
+				100: "hsla(var(--primary-100), <alpha-value>)",
+				200: "hsla(var(--primary-200), <alpha-value>)",
+				300: "hsla(var(--primary-300), <alpha-value>)",
+				400: "hsla(var(--primary-400), <alpha-value>)",
+				500: "hsla(var(--primary-500), <alpha-value>)",
+				600: "hsla(var(--primary-600), <alpha-value>)",
+				700: "hsla(var(--primary-700), <alpha-value>)",
+				800: "hsla(var(--primary-800), <alpha-value>)",
+				900: "hsla(var(--primary-900), <alpha-value>)",
+				1000: "hsla(var(--primary-1000), <alpha-value>)",
+			  },
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'

@@ -104,7 +104,7 @@ export function LoginForm({
                 Don&apos;t have an account?{" "}
                 <a
                   href="/signup"
-                  className="underline underline-offset-4 text-primary"
+                  className="underline underline-offset-4 text-primary-800 dark:text-primary-500"
                 >
                   Sign up
                 </a>

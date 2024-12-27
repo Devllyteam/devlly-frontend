@@ -1,5 +1,5 @@
 import {
-  DiscordLogo,
+  
   GitHubLogo,
   LinkedInLogo,
   TwitterLogo,
@@ -65,7 +65,7 @@ export const STRIPE_PRICE_IDS = {
   } as Record<number, string>,
 };
 
-export const PRICING_TIERS: {} = {
+export const PRICING_TIERS = {
   standard: [
     {
       title: "Intern",
@@ -139,11 +139,7 @@ export const PRICING_TIERS: {} = {
   ],
 };
 
-type FooterLink = {
-  text: string;
-  href: string;
-  target?: string;
-};
+
 
 export const footerSections = [
   {

@@ -4,7 +4,7 @@ import { Reddit_Sans as Geist_Sans } from 'next/font/google';
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import Script from "next/script";
-import { Toaster } from "@/components/ui/toaster";
+
 
 const geistSans = Geist_Sans({
   subsets: ['latin'],
@@ -130,7 +130,7 @@ export default function RootLayout({
           <main className="sm:container mx-auto w-[85vw] h-auto">
             {children}
           </main>
-          <Toaster />
+        
         </ThemeProvider>
       </body>
     </html>

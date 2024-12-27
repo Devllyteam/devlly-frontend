@@ -1,6 +1,6 @@
 "use client";
 
-import { JSX, useEffect, useState } from "react";
+import { JSX, useCallback, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import {
   AiderLogo,
@@ -149,12 +149,7 @@ export default function IntegrationBox() {
   const controls = useAnimation();
   const textControls = useAnimation();
 
-  useEffect(() => {
-    setIsAnimating(true);
-    animateUpDown();
-  }, []);
-
-  const animateUpDown = async () => {
+  const animateUpDown = useCallback(async () => {
     while (true) {
       await controls.start({
         y: [0, 20, 0],
@@ -169,7 +164,12 @@ export default function IntegrationBox() {
         transition: { duration: 1, times: [0, 0.5, 1] },
       });
     }
-  };
+  }, [controls, textControls]);
+
+  useEffect(() => {
+    animateUpDown();
+    setIsAnimating(true);
+  }, [animateUpDown]);
 
   const pathVariants = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -194,7 +194,6 @@ export default function IntegrationBox() {
     repeat: Infinity,
     ease: "linear",
   };
-
   return (
     <>
       {/* Large Display */}

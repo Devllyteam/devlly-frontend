@@ -139,6 +139,12 @@ export const PRICING_TIERS: {} = {
   ],
 };
 
+type FooterLink = {
+  text: string;
+  href: string;
+  target?: string;
+};
+
 export const footerSections = [
   {
     title: "Company",

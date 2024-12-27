@@ -1,19 +1,14 @@
 "use client";
 import { ReactNode, forwardRef, ComponentPropsWithoutRef } from "react";
-import { useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 import { ModeToggle } from "./moon";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
@@ -36,19 +31,6 @@ const NavItem = ({
   >
     <Link href={href}>{children}</Link>
   </NavigationMenuLink>
-);
-
-const DropdownNavItem = ({
-  trigger,
-  children,
-}: {
-  trigger: string;
-  children: ReactNode;
-}) => (
-  <NavigationMenuItem>
-    <NavigationMenuTrigger>{trigger}</NavigationMenuTrigger>
-    <NavigationMenuContent>{children}</NavigationMenuContent>
-  </NavigationMenuItem>
 );
 
 const ListItem = forwardRef<
@@ -76,10 +58,6 @@ const ListItem = forwardRef<
 ));
 ListItem.displayName = "ListItem";
 export function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
   return (
     <header className="fixed left-0 right-0 top-0 z-50 p-4 transition-all duration-300 ease-in-out">
       <div className="mx-auto max-w-[1024px] ">

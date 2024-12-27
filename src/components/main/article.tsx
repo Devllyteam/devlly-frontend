@@ -30,7 +30,7 @@ import {
   ListOrdered,
   Type,
   Link,
-  Image,
+  Image as ImageIcon,
   Table,
   Minus,
 } from "lucide-react";
@@ -233,7 +233,7 @@ export function ArticleToolbarPlugin() {
           onClick={insertImage}
           className="h-8 w-8"
         >
-          <Image className="h-4 w-4" />
+          <ImageIcon className="h-4 w-4" />
         </Button>
         <Button
           variant="ghost"

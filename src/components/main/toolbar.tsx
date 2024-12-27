@@ -2,7 +2,7 @@
 
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 import { FORMAT_TEXT_COMMAND } from "lexical";
-import { Bold, List, AlignLeft, Image } from "lucide-react";
+import { Bold, List, AlignLeft, Image as Imageicon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function ToolbarPlugin() {
@@ -31,7 +31,7 @@ export function ToolbarPlugin() {
         <AlignLeft className="h-4 w-4" />
       </Button>
       <Button variant="ghost" size="icon" className="h-8 w-8">
-        <Image className="h-4 w-4" />
+        <Imageicon className="h-4 w-4" />
       </Button>
       <Button variant="ghost" size="icon" className="h-8 w-8">
         <List className="h-4 w-4" />

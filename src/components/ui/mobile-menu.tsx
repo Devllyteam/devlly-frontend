@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "./button";
-import { LogIn, LogOut, Menu, Settings, SquareArrowRight } from "lucide-react";
+import { LogIn,  Menu,  SquareArrowRight } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -11,12 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 import { useTheme } from "next-themes";
 import { MoonStar, Sun } from "lucide-react";
 

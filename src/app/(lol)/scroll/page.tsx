@@ -1,7 +1,7 @@
-import { Badge } from "@/components/ui/badge";
+
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PanelsTopLeft, Box, House, BellIcon, Landmark } from "lucide-react";
+import { PanelsTopLeft, Box, House, BellIcon } from "lucide-react";
 import PostEditor from "@/components/main/post";
 import { TabsContent } from "@radix-ui/react-tabs";
 

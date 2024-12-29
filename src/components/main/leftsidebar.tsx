@@ -3,15 +3,22 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Inbox, Search, Menu } from "lucide-react";
+import {
+  Inbox,
+  Search,
+  Menu,
+  House,
+  BriefcaseBusiness,
+  NotebookPen,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 // Define navigation items
 const navItems = [
-  { href: "/scroll", icon: "/scroll.svg", label: "Scroll" },
-  { href: "/spotlight", icon: "/pen.svg", label: "Post" },
-  { href: "/gig", icon: "/bag.svg", label: "GIG" },
+  { href: "/scroll", icon: House, label: "Scroll" },
+  { href: "/spotlight", icon: NotebookPen, label: "Post" },
+  { href: "/gig", icon: BriefcaseBusiness, label: "GIG" },
   { href: "/inbox", icon: Inbox, label: "Inbox" },
   { href: "/search", icon: Search, label: "Search" },
 ];
@@ -47,7 +54,7 @@ const LeftSidebar: React.FC = () => {
           "fixed inset-y-0 left-0 md:left-0 lg:left-52 z-30",
           "w-64 bg-background transition-transform duration-200 ease-in-out",
           "md:translate-x-0 md:w-20 lg:w-48 lg:ml-44",
-          "flex flex-col border-r",
+          "flex flex-col border-r dark:border-neutral-700",
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         )}
       >
@@ -62,9 +69,9 @@ const LeftSidebar: React.FC = () => {
 const Header: React.FC = () => (
   <div className="p-6 flex items-center justify-center md:justify-start">
     <Link href="/" className="flex items-center space-x-2">
-      <Image src="/devlly.svg" width={30} height={40} alt="Devlly Logo" />
+      <Image src="/growify.svg" width={30} height={40} alt="Devlly Logo" />
       <span className="font-bold text-xl hidden md:hidden lg:inline">
-        Devlly
+        Growify
       </span>
     </Link>
   </div>
@@ -87,14 +94,10 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ href, icon, label }) => (
   <Link
     href={href}
-    className="flex items-center gap-2 text-base font-medium rounded-lg px-3 py-2 hover:bg-accent transition-colors duration-200"
+    className="flex items-center gap-2 text-base font-semibold rounded-lg px-3 py-2 hover:bg-accent transition duration-200"
   >
-    {typeof icon === "string" ? (
-      <Image src={icon} width={24} height={24} alt={`${label} icon`} />
-    ) : (
-      React.createElement(icon, { className: "h-5 w-5" })
-    )}
-    <span className="hidden md:hidden lg:inline">{label}</span>
+    {React.createElement(icon, { className: "h-6 w-6  " })}
+    <span className="hidden lg:inline">{label}</span>
   </Link>
 );
 

@@ -115,7 +115,7 @@ export function ArticleToolbarPlugin() {
   };
 
   return (
-    <div className="flex flex-wrap gap-2 border rounded-lg p-2 bg-white">
+    <div className="flex flex-wrap gap-2 border dark:border-neutral-700 rounded-lg p-2 ">
       <Select onValueChange={(value) => formatHeading(value)}>
         <SelectTrigger className="w-[180px]">
           <Type className="h-4 w-4 mr-2" />

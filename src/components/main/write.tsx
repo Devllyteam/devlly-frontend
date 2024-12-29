@@ -46,7 +46,7 @@ const initialConfig = {
       h2: "text-3xl font-bold",
       h3: "text-2xl font-bold",
     },
-    quote: "border-l-4 border-gray-200 pl-4 italic",
+    quote: "border-l-4  dark:border-neutral-700 pl-4 italic",
     list: {
       ol: "list-decimal ml-4",
       ul: "list-disc ml-4",
@@ -73,7 +73,7 @@ export function WriteArticleDialog() {
           <LexicalComposer initialConfig={initialConfig}>
             <div className="space-y-4">
               <ArticleToolbarPlugin />
-              <div className="relative min-h-[500px] border rounded-lg p-4">
+              <div className="relative min-h-[500px] border dark:border-neutral-700 rounded-lg p-4">
                 <RichTextPlugin
                   contentEditable={
                     <ContentEditable
@@ -97,7 +97,7 @@ export function WriteArticleDialog() {
             Cancel
           </Button>
           <Button variant="outline">Save Draft</Button>
-          <Button className="bg-green-500 hover:bg-green-600">Publish</Button>
+          <Button className="">Publish</Button>
         </div>
       </DialogContent>
     </Dialog>

@@ -406,12 +406,9 @@ export default function IntegrationBox() {
                   <span className="text-gray-500 dark:text-gray-400">
                     1/12 Launch
                   </span>
-                  <motion.span
-                    className="dark:text-neutral-900 font-medium text-black/60"
-                    animate={textControls}
-                  >
+                  <span className="dark:text-neutral-900 font-medium text-black/60">
                     More coming soon
-                  </motion.span>
+                  </span>
                 </div>
               </div>
             </motion.div>

@@ -37,8 +37,8 @@ function CharacterCount() {
 
 export default function PostEditor() {
   return (
-    <div className="w-full border-b mx-auto p-4">
-      <div className="border rounded-lg p-4 bg-white">
+    <div className="w-full border-b dark:border-neutral-700 mx-auto p-4">
+      <div className="border rounded-lg p-4 dark:border-neutral-700 ">
         <div className="flex items-start gap-3 mb-4">
           <Avatar className="w-10 h-10">
             <AvatarImage src="/placeholder.svg" alt="User avatar" />
@@ -74,6 +74,3 @@ export default function PostEditor() {
     </div>
   );
 }
-
-
-

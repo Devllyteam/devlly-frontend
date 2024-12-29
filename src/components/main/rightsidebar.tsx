@@ -13,7 +13,7 @@ export function RightSidebar() {
     <div
         className={`fixed inset-y-0 right-0 transform ${
           rightSidebarOpen ? "translate-x-0" : "translate-x-full"
-        } lg:translate-x-0 z-30 w-[320px] bg-background transition duration-200 ease-in-out lg:right-64 flex flex-col border-l`}
+        } lg:translate-x-0 z-30 w-[320px] bg-background transition duration-200 ease-in-out lg:right-64 flex flex-col dark:border-neutral-700 border-l`}
       >
         <div className="p-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
@@ -30,7 +30,7 @@ export function RightSidebar() {
           </Button>
         </div>
         <div className="flex-1 p-4 overflow-y-auto">
-          <div className="rounded-lg border bg-card p-4">
+          <div className="rounded-lg border dark:border-neutral-700 bg-card p-4">
             <h3 className="font-semibold">Staff Picked Project!</h3>
             <div className="mt-4 space-y-4">
               <div className="flex items-center gap-4">

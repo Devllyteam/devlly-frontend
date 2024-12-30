@@ -1,15 +1,26 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Reddit_Sans as Geist_Sans } from 'next/font/google';
+import { Reddit_Sans as GeistSans, Poppins, Inter } from "next/font/google";
+import {} from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import Script from "next/script";
-
-
-const geistSans = Geist_Sans({
-  subsets: ['latin'],
-  variable: '--font-geist-sans',
+const geistSans = GeistSans({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
 });
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 
 export const metadata: Metadata = {
   title: {
@@ -120,7 +131,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.variable}  antialiased bg-background`}>
+      <body
+        className={`${poppins.variable} ${inter.variable} ${geistSans.variable} antialiased bg-background font-sans`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -130,7 +143,6 @@ export default function RootLayout({
           <main className="sm:container mx-auto w-[85vw] h-auto">
             {children}
           </main>
-        
         </ThemeProvider>
       </body>
     </html>

@@ -1,9 +1,7 @@
 "use client";
 
 import Footer from "@/components/footer";
-
 import HeroAi from "@/components/hero";
-
 import { NavBar } from "@/components/navbar";
 
 const Page = () => {

@@ -37,7 +37,7 @@ function CharacterCount() {
 
 export default function PostEditor() {
   return (
-    <div className="w-full border-b dark:border-neutral-700 mx-auto p-4">
+    <div className="w-full -ml-3 md:ml-0 md:mx-auto pb-4">
       <div className="border rounded-lg p-4 dark:border-neutral-700 ">
         <div className="flex items-start gap-3 mb-4">
           <Avatar className="w-10 h-10">
@@ -46,7 +46,8 @@ export default function PostEditor() {
           </Avatar>
           <LexicalComposer initialConfig={initialConfig}>
             <div className="flex-1">
-              <div className="relative mb-4">
+              <div className="relative
+               mb-4">
                 <RichTextPlugin
                   contentEditable={
                     <ContentEditable

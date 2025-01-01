@@ -8,17 +8,17 @@ import {
   Search,
   Menu,
   House,
-  BriefcaseBusiness,
-  NotebookPen,
+ 
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { BagIcon, PenIcon } from "../icon";
 
 // Define navigation items
 const navItems = [
   { href: "/scroll", icon: House, label: "Scroll" },
-  { href: "/spotlight", icon: NotebookPen, label: "Post" },
-  { href: "/gig", icon: BriefcaseBusiness, label: "GIG" },
+  { href: "/spotlight", icon: PenIcon , label: "Post" },
+  { href: "/gig", icon: BagIcon, label: "GIG" },
   { href: "/inbox", icon: Inbox, label: "Inbox" },
   { href: "/search", icon: Search, label: "Search" },
 ];
@@ -94,9 +94,9 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ href, icon, label }) => (
   <Link
     href={href}
-    className="flex items-center gap-2 text-base font-semibold rounded-lg px-3 py-2 hover:bg-accent transition duration-200"
+    className="flex items-center gap-2  rounded-lg px-3 py-2 hover:bg-accent transition duration-200"
   >
-    {React.createElement(icon, { className: "h-6 w-6  " })}
+    {React.createElement(icon, { className: "h-6 w-6 opacity-80  " })}
     <span className="hidden lg:inline">{label}</span>
   </Link>
 );

@@ -29,7 +29,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-				  		
+		fontFamily: {
+			poppins: ['var(--font-poppins)'],
+			inter: ['var(--font-inter)'],
+			geist: ['var(--font-geist-sans)'],
+		  },		  		
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

@@ -22,6 +22,8 @@ import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
 import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { ArticleToolbarPlugin } from "./article";
 
+import { PenIcon } from "../icon";
+
 const initialConfig = {
   namespace: "article-editor",
   nodes: [
@@ -62,6 +64,8 @@ export function WriteArticleDialog() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button variant="outline" size="sm">
+          <PenIcon className="h-6 w-6 hidden dark:flex" stroke=" white " />
+          <PenIcon className="h-6 w-6 flex dark:hidden" stroke=" black " />
           Write Article
         </Button>
       </DialogTrigger>

@@ -1,9 +1,16 @@
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { PanelsTopLeft, Box, HomeIcon as House, BaggageClaim } from "lucide-react";
+import {
+  PanelsTopLeft,
+
+  HomeIcon as House,
+
+  Banknote,
+} from "lucide-react";
 import { ModeToggle } from "@/components/moon";
 import AnimatedPostEditor from "@/components/main/post";
-import { BagIcon } from "@/components/icon";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Scroll = () => {
   return (
@@ -38,7 +45,7 @@ const Scroll = () => {
                 value="tab-3"
                 className="relative overflow-hidden rounded-none border-l border-border py-2 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 first:rounded-s last:rounded-e  "
               >
-                <BaggageClaim
+                <Banknote
                   className="h-4 w-4 -ms-0.5 me-1.5 "
                   strokeWidth={2}
                   aria-hidden="true"
@@ -57,7 +64,10 @@ const Scroll = () => {
                   className="rounded-lg border dark:border-neutral-700 bg-card p-4"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="h-10 w-10 rounded-full bg-muted" />
+                    <Avatar className="h-8 w-8 rounded-full border dark:border-neutral-700">
+                      <AvatarImage src="/avatar.jpg" alt="User avatar" />
+                      <AvatarFallback>AR</AvatarFallback>
+                    </Avatar>
                     <div className="flex-1">
                       <div className="text-sm font-medium">Post Title</div>
                       <div className="text-xs text-muted-foreground">

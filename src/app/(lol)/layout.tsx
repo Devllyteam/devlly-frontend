@@ -25,7 +25,7 @@ export default function RootLayout({
       )}
 
       <main className="flex-1 flex flex-col items-center justify-center px-4 lg:ml-[280px] lg:mr-[320px]">
-        <div className="container max-w-[700px] mx-auto py-4 pl-4">
+        <div className="container max-w-[600px] mx-auto py-4 pl-4">
           {children}
         </div>
       </main>

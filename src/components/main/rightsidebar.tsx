@@ -24,7 +24,7 @@ export function RightSidebar() {
         <ModeToggle />
         <div>
           <Avatar className="h-8 w-8">
-            <AvatarImage src="/placeholder.svg" />
+            <AvatarImage src="/avatar.jpg" />
             <AvatarFallback>UN</AvatarFallback>
           </Avatar>
         </div>
@@ -59,7 +59,7 @@ export function RightSidebar() {
             {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="flex items-center gap-4">
                 <Avatar className="h-8 w-8">
-                  <AvatarImage src="/placeholder.svg" />
+                  <AvatarImage src="/avatar.jpg" />
                   <AvatarFallback>UN</AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
@@ -79,7 +79,7 @@ export function RightSidebar() {
             {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="flex items-start gap-4">
                 <Avatar className="h-8 w-8">
-                  <AvatarImage src="/placeholder.svg" />
+                  <AvatarImage src="/avatar.jpg" />
                   <AvatarFallback>UN</AvatarFallback>
                 </Avatar>
                 <div className="flex-1">

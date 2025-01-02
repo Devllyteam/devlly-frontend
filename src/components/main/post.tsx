@@ -5,27 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { WriteArticleDialog } from "./write";
 import { Copy, BookOpen, Image, List } from 'lucide-react';
-import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 
-function CharacterCount() {
-  const [editor] = useLexicalComposerContext();
-  const [charCount, setCharCount] = useState(0);
 
-  useEffect(() => {
-    return editor.registerUpdateListener(({ editorState }) => {
-      editorState.read(() => {
-        const text = editor
-          .getEditorState()
-          .read(() => editor.getRootElement()?.textContent || "");
-        setCharCount(text.length);
-      });
-    });
-  }, [editor]);
-
-  return (
-    <div className="text-sm text-muted-foreground">{charCount} characters</div>
-  );
-}
 
 const prompts = [
   "What are you building?",
@@ -50,7 +31,7 @@ export default function AnimatedPostEditor() {
     <div className="w-full max-w-3xl p-4 mx-auto bg-card rounded-lg border dark:border-neutral-700">
       <div className="flex flex-col sm:flex-row items-start gap-3">
         <Avatar className="w-10 h-10 hidden sm:block">
-          <AvatarImage src="/placeholder.svg" alt="User avatar" />
+          <AvatarImage src="/avatar.jpg" alt="User avatar" />
           <AvatarFallback>U</AvatarFallback>
         </Avatar>
 
@@ -77,6 +58,7 @@ export default function AnimatedPostEditor() {
               <Button variant="ghost" size="icon" className="sm:text-base text-sm">
                 <Image className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
+              
             </div>
 
             <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-end">

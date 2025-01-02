@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="col-span-full mb-2 sm:mb-8 xl:col-span-2 xl:mb-0">
           <Link className="-ml-1 flex items-center gap-2 " href="/">
             <Image src={"/growify.svg"} width={60} height={30} alt="Growify" />
-            <h1 className="font-bold text-4xl text-primary-700 dark:text-white">
+            <h1 className="font-bold text-4xl text-primary-700 dark:text-white font-inter">
               Growify
             </h1>
           </Link>

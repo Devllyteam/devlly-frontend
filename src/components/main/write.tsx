@@ -63,7 +63,7 @@ export function WriteArticleDialog() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline" size="sm">
+        <Button variant="outline" size="sm"  className="bg-card">
           <PenIcon className="h-6 w-6 hidden dark:flex" stroke=" white " />
           <PenIcon className="h-6 w-6 flex dark:hidden" stroke=" black " />
           Write Article

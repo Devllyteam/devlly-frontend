@@ -72,12 +72,12 @@ export function NavBar() {
                 className="flex flex-shrink-0 items-center"
                 aria-label="Growify Home"
               >
-                <Image src="/growify.svg" width={35} height={25} alt="Devlly" />
-                <div className="ml-2 text-2xl  font-bold">Growify</div>
+                <Image src="/growify.svg" width={30} height={30} alt="Devlly" />
+                <div className="ml-2 text-2xl font-inter font-bold">Growify</div>
               </Link>
               <nav className="ml-4 hidden md:block" aria-label="Main menu">
                 <NavigationMenu>
-                  <NavigationMenuList className="flex items-center text-neutral-700 dark:text-neutral-300 ">
+                  <NavigationMenuList className="font-poppins flex items-center text-neutral-700 dark:text-neutral-300 ">
                     <NavItem href="/scroll">SCROLL</NavItem>
                     <NavItem href="/gig">GIG</NavItem>
                     <NavItem href="/pitchroom">PITCHROOM</NavItem>

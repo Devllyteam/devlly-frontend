@@ -45,7 +45,7 @@ export default function Hero() {
                 delay: 0.2,
               }}
             >
-              <h1 className="bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-transparent dark:from-neutral-50 dark:to-neutral-300">
+              <h1 className="bg-gradient-to-b from-neutral-700 to-neutral-900 bg-clip-text text-transparent dark:from-neutral-50 dark:to-neutral-300 font-poppins">
                 Build Your Network
                 <br />
                 Grow Your Career
@@ -81,7 +81,7 @@ export default function Hero() {
               }}
             >
               <Link href="/signup" className="">
-                <Button className=" font-semibold">Create Account Today <LogIn/></Button>
+                <Button className=" font-semibold font-poppins">Create Account Today <LogIn/></Button>
               </Link>
             </motion.div>
           </div>

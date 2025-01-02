@@ -7,7 +7,7 @@ https://www.onborda.dev/page-two
 https://ui.jln.dev/
 https://animata.design/docs/setup
 https://icon-sets.iconify.design/
-
+https://www.streamlinehq.com/illustrations/milano?icon=ico_Az99GUnz0miCgRLF
 
 import {
   Breadcrumb,

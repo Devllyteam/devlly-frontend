@@ -8,6 +8,8 @@ import {
   Search,
   Menu,
   House,
+  
+  Award,
  
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -18,7 +20,8 @@ import { BagIcon, PenIcon } from "../icon";
 const navItems = [
   { href: "/scroll", icon: House, label: "Scroll" },
   { href: "/spotlight", icon: PenIcon , label: "Post" },
-  { href: "/gig", icon: BagIcon, label: "GIG" },
+  { href: "/pitchroom", icon: Award  , label: "Pitchroom" },
+  { href: "/gig", icon: BagIcon, label: "Freelance" },
   { href: "/inbox", icon: Inbox, label: "Inbox" },
   { href: "/search", icon: Search, label: "Search" },
 ];
@@ -70,7 +73,7 @@ const Header: React.FC = () => (
   <div className="p-6 flex items-center justify-center md:justify-start">
     <Link href="/" className="flex items-center space-x-2">
       <Image src="/growify.svg" width={30} height={40} alt="Devlly Logo" />
-      <span className="font-bold text-xl hidden md:hidden lg:inline">
+      <span className="font-bold font-inter text-xl hidden md:hidden lg:inline">
         Growify
       </span>
     </Link>
@@ -97,19 +100,19 @@ const NavItem: React.FC<NavItemProps> = ({ href, icon, label }) => (
     className="flex items-center gap-2  rounded-lg px-3 py-2 hover:bg-accent transition duration-200"
   >
     {React.createElement(icon, { className: "h-6 w-6 opacity-80  " })}
-    <span className="hidden lg:inline">{label}</span>
+    <span className="hidden font-medium font-poppins lg:inline">{label}</span>
   </Link>
 );
 
 const Footer: React.FC = () => (
-  <div className="p-4 text-center md:text-left">
-    <div className="text-sm text-muted-foreground space-x-2 hidden md:hidden lg:block">
+  <div className="p-2 text-center md:text-left">
+    <div className="text-sm text-muted-foreground font-inter space-x-2 hidden md:hidden lg:block">
       <Link href="#">Blog</Link>
       <Link href="#">Support</Link>
       <Link href="#">Help</Link>
       <Link href="#">Legal</Link>
     </div>
-    <div className="p-1 text-sm text-muted-foreground">@2025 Devlly</div>
+    <div className="pl-4 mt-2 text-sm text-muted-foreground font-inter" >© 2025 Growify</div>
   </div>
 );
 

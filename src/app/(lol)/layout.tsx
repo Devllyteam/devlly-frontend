@@ -1,6 +1,7 @@
 "use client";
 
 import Leftsidebar from "@/components/main/leftsidebar";
+import Message from "@/components/main/message";
 import { DockDemo } from "@/components/main/mobiledock";
 import { RightSidebar } from "@/components/main/rightsidebar";
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         </div>
       </main>
       <RightSidebar />
+      <Message/>
     </div>
   );
 }

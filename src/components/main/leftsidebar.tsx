@@ -29,7 +29,7 @@ import {
 
 const navItems = [
   { href: "/scroll", icon: House, label: "Scroll" },
-  { href: "/spotlight", icon: PenIcon, label: "Post" },
+  { href: "/spotlight", icon: PenIcon, label: "Blog" },
   { href: "/pitchroom", icon: Award, label: "Pitchroom" },
   { href: "/gig", icon: BagIcon, label: "Freelance" },
   { href: "/inbox", icon: Inbox, label: "Inbox" },

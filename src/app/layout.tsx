@@ -5,6 +5,7 @@ import {} from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import Script from "next/script";
+import ReduxProvider from "@/store/ReduxProvider";
 const geistSans = GeistSans({
   subsets: ["latin"],
   variable: "--font-geist-sans",
@@ -20,7 +21,6 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
-
 
 export const metadata: Metadata = {
   title: {
@@ -141,7 +141,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="sm:container mx-auto w-[85vw] h-auto">
-            {children}
+            <ReduxProvider>{children}</ReduxProvider>
           </main>
         </ThemeProvider>
       </body>

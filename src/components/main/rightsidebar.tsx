@@ -6,7 +6,7 @@ import {  Search, X } from "lucide-react";
 import { useState } from "react";
 import { Input } from "../ui/input";
 import { ModeToggle } from "../moon";
-import { Card, CardTitle } from "../ui/card";
+import { Card } from "../ui/card";
 export function RightSidebar() {
   const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
 

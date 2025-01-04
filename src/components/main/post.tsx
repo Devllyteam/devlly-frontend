@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { WriteArticleDialog } from "./write";
-import { Copy, BookOpen, Image, List } from 'lucide-react';
+import { Copy, BookOpen, Image as Imu, List } from 'lucide-react';
 
 
 
@@ -56,7 +56,7 @@ export default function AnimatedPostEditor() {
                 <BookOpen className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button variant="ghost" size="icon" className="sm:text-base text-sm">
-                <Image className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Imu className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               
             </div>

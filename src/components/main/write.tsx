@@ -66,12 +66,12 @@ export function WriteArticleDialog() {
         <Button variant="outline" size="sm"  className="bg-card">
           <PenIcon className="h-6 w-6 hidden dark:flex" stroke=" white " />
           <PenIcon className="h-6 w-6 flex dark:hidden" stroke=" black " />
-          Write Article
+          Write Blog
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-4xl h-[80vh]">
         <DialogHeader>
-          <DialogTitle>Write Article</DialogTitle>
+          <DialogTitle>Write Blog</DialogTitle>
         </DialogHeader>
         <div className="overflow-y-auto flex-1">
           <LexicalComposer initialConfig={initialConfig}>

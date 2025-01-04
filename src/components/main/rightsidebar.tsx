@@ -6,7 +6,7 @@ import {  Search, X } from "lucide-react";
 import { useState } from "react";
 import { Input } from "../ui/input";
 import { ModeToggle } from "../moon";
-import { Card } from "../ui/card";
+import { Card, CardTitle } from "../ui/card";
 export function RightSidebar() {
   const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
 
@@ -93,6 +93,7 @@ export function RightSidebar() {
           </div>
         </Card>
       </div>
+      
       <div
         className={`fixed inset-0 bg-black bg-opacity-50 z-20 lg:hidden ${
           rightSidebarOpen ? "block" : "hidden"

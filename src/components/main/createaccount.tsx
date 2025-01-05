@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,28 +11,52 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import { useRegisterMutation } from "@/store/apislice";
 
 export function CreateAccountForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
-    const [isVisible, setIsVisible] = useState<boolean>(false);
-  
-    const toggleVisibility = () => setIsVisible((prevState) => !prevState);
-  
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [register, { isLoading, error }] = useRegisterMutation();
+
+  const toggleVisibility = () => setIsVisible((prevState) => !prevState);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const result = await register({ username, email, password }).unwrap();
+      if (result.success) {
+        console.log("Registration successful", result.data);
+        // Handle successful registration (e.g., redirect to login page or show success message)
+      } else {
+        console.error("Registration failed", result.message);
+        // Handle registration failure
+      }
+    } catch (err) {
+      console.error("An error occurred during registration", err);
+    }
+  };
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Sign up & create your profile.</CardTitle>
+          <CardTitle className="text-xl">
+            Sign up & create your profile.
+          </CardTitle>
           <CardDescription>
-          Create Account with your Apple or Google account
+            Create Account with your Apple or Google account
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="grid gap-6">
               <div className="flex flex-col gap-4">
                 <Button variant="outline" className="w-full">
@@ -59,7 +84,7 @@ export function CreateAccountForm({
                 </span>
               </div>
               <div className="grid gap-6">
-              <div className="grid gap-2">
+                <div className="grid gap-2">
                   <div className="flex items-center">
                     <Label htmlFor="username">Username</Label>
                   </div>
@@ -68,6 +93,8 @@ export function CreateAccountForm({
                     type="text"
                     placeholder="username"
                     required
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                 </div>
                 <div className="grid gap-2">
@@ -79,11 +106,13 @@ export function CreateAccountForm({
                     type="email"
                     placeholder="m@example.com"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="grid gap-2">
-                <div className="flex items-center">
-                  <Label htmlFor="password">password </Label>
+                  <div className="flex items-center">
+                    <Label htmlFor="password">password </Label>
                   </div>
                   <div className="relative">
                     <Input
@@ -91,6 +120,8 @@ export function CreateAccountForm({
                       className="pe-9"
                       placeholder="Password"
                       type={isVisible ? "text" : "password"}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                     <button
                       className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg text-muted-foreground/80 outline-offset-2 transition-colors hover:text-foreground focus:z-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
@@ -108,13 +139,25 @@ export function CreateAccountForm({
                     </button>
                   </div>
                 </div>
-                <Button type="submit" className="w-full font-semibold">
-                    Create Account
+                <Button
+                  type="submit"
+                  className="w-full font-semibold"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Creating Account..." : "Create Account"}
                 </Button>
               </div>
+              {error && (
+                <div className="text-red-500 text-sm mt-2">
+                  An error occurred during registration. Please try again.
+                </div>
+              )}
               <div className="text-center text-sm">
                 Already have an account?{" "}
-                <a href="/signin" className="underline underline-offset-4 text-primary-800 dark:text-primary-500">
+                <a
+                  href="/signin"
+                  className="underline underline-offset-4 text-primary-800 dark:text-primary-500"
+                >
                   Login
                 </a>
               </div>

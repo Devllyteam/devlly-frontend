@@ -6,6 +6,7 @@ import "./globals.css";
 import { siteConfig } from "@/config/site";
 import Script from "next/script";
 import ReduxProvider from "@/store/ReduxProvider";
+
 const geistSans = GeistSans({
   subsets: ["latin"],
   variable: "--font-geist-sans",

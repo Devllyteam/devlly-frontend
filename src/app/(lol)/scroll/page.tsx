@@ -6,7 +6,7 @@ import {
   Banknote,
   ListFilter,
 } from "lucide-react";
-import { ModeToggle } from "@/components/moon";
+
 import AnimatedPostEditor from "@/components/main/post";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";

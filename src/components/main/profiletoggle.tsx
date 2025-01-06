@@ -1,19 +1,8 @@
 "use client";
-
-import {
-  LogOut,
-  MoveUpRight,
-  Settings,
-  CreditCard,
-  FileText,
-  ChevronDown,
-} from "lucide-react";
-
-import { Bolt, BookOpen, Layers2, Pin, UserPen } from "lucide-react";
+import { LogOut, Bolt, BookOpen, Layers2, Pin, UserPen } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { AvatarFallback } from "@radix-ui/react-avatar";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,55 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-interface MenuItem {
-  label: string;
-  value?: string;
-  href: string;
-  icon?: React.ReactNode;
-  external?: boolean;
-}
-
-interface Profile01Props {
-  name: string;
-  role: string;
-  avatar: string;
-  subscription?: string;
-}
-
-const defaultProfile = {
-  name: "John Doe",
-  role: "Prompt Engineer",
-  avatar: "/avatar.jpg",
-  subscription: "Free Trial",
-} satisfies Required<Profile01Props>;
-
-export default function Profile({
-  name = defaultProfile.name,
-  role = defaultProfile.role,
-  avatar = defaultProfile.avatar,
-  subscription = defaultProfile.subscription,
-}: Partial<Profile01Props> = defaultProfile) {
-  const menuItems: MenuItem[] = [
-    {
-      label: "Subscription",
-      value: subscription,
-      href: "#",
-      icon: <CreditCard className="w-4 h-4" />,
-      external: false,
-    },
-    {
-      label: "Settings",
-      href: "#",
-      icon: <Settings className="w-4 h-4" />,
-    },
-    {
-      label: "Terms & Policies",
-      href: "#",
-      icon: <FileText className="w-4 h-4" />,
-      external: true,
-    },
-  ];
-
+export default function Profile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

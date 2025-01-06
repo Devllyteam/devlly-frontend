@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Input } from "../ui/input";
 import { ModeToggle } from "../moon";
 import { Card } from "../ui/card";
+import Profile from "./profiletoggle";
 export function RightSidebar() {
   const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
 
@@ -23,10 +24,7 @@ export function RightSidebar() {
         </div>
         <ModeToggle />
         <div>
-          <Avatar className="h-8 w-8">
-            <AvatarImage src="/avatar.jpg" />
-            <AvatarFallback>UN</AvatarFallback>
-          </Avatar>
+        <Profile/>
         </div>
 
         <Button

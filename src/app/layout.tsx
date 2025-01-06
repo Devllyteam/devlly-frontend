@@ -6,6 +6,9 @@ import "./globals.css";
 import { siteConfig } from "@/config/site";
 import Script from "next/script";
 import ReduxProvider from "@/store/ReduxProvider";
+import { Toaster } from "@/components/ui/toaster"
+
+
 
 const geistSans = GeistSans({
   subsets: ["latin"],
@@ -144,6 +147,7 @@ export default function RootLayout({
           <main className="sm:container mx-auto w-[85vw] h-auto">
             <ReduxProvider>{children}</ReduxProvider>
           </main>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
